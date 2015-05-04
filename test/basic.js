@@ -42,6 +42,14 @@ vows.describe('basic').addBatch({
     		assert.deepEqual(topic, [ 1751477356, 1864398703, 26390198772736 ]);
     	}
     },
+    'can convert from a utf8 array (default)': {
+        topic: function() {
+            return BitArrayTools.convert([ 104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100 ]);
+        },
+        'to a bitArray': function(topic) {
+            assert.deepEqual(topic, [ 1751477356, 1864398703, 26390198772736 ]);
+        }
+    },
     'can convert from a bitArray': {
     	topic: function() {
     		return BitArrayTools.convert([ 1751477356, 1864398703, 26390198772736 ], 'utf8');
