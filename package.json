@@ -1,0 +1,34 @@
+{
+    "name"        : "bit-array-tools",
+    "description" : "tools for sjcl.bitArray",
+    "homepage"    : "https://github.com/daxxog/bit-array-tools",
+    "main"        : "bit-array-tools.min.js",
+    "version"     : "0.0.1",
+    "engines": {
+        "node" : ">=0.10.33"
+    },
+    "maintainers": [{
+        "name"  : "David Volm",
+        "email" : "david@volminator.com",
+        "web"   : "http://daxxog.com/"
+    }],
+    "repository": {
+        "type" : "git",
+        "url"  : "https://github.com/daxxog/bit-array-tools.git"
+    },
+    "devDependencies": {
+        "bitfactory": "*",
+        "stoptime": "*",
+        "uglify-js": "*",
+        "vows": "*"
+    },
+    "scripts": {
+        "build": "node make.js",
+        "test": "vows test/*",
+        "start": "node cli.js",
+        "prepublish": "npm run build"
+    },
+    "files": [
+        "bit-array-tools.min.js"
+    ]
+}
