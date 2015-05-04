@@ -22,7 +22,7 @@
 }(this, function() {
     var BitArrayTools = {};
     
-    // Convert a sjcl.bitArray or a string into utf8 byte array
+    // convert between various formats [source data, dest format (default: 'bitArray')]
     BitArrayTools.convert = function(source, to) {
         switch(to) {
             case 'utf8':
@@ -69,6 +69,7 @@
         return source;
     };
 
+    // Convert a sjcl.bitArray or a string into utf8 byte array
     BitArrayTools._utf8 = function(source) {
         if(Array.isArray(source)) {
             return BitArrayTools._utf8_bitArray(source);
