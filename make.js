@@ -28,10 +28,6 @@ bitfactory.make({ //routes
         "bit-array-tools.min.js": ["header", function(cb) {
             fs.writeFileSync('bit-array-tools.min.js', header + UglifyJS.minify('bit-array-tools.js').code);
             cb();
-        }],
-        "cli.min.js": ["header", function(cb) {
-            fs.writeFileSync('cli.min.js', header + UglifyJS.minify('cli.js').code);
-            cb();
         }]
     }
 });
